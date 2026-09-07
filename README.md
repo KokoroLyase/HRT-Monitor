@@ -2,6 +2,8 @@
 
 一款**本地优先、无账户、无广告**的应用，用于跨性别女性性激素六项化验结果的记录、监测与报告。提供**安卓 APP**（Kotlin + Jetpack Compose）与**网页版 PWA**（零依赖静态站点，可部署到 Cloudflare Pages，iPhone/iPad 可添加到主屏幕），两平台功能一致、备份数据格式互通。
 
+> 🌐 **在线使用（网页版）**：<https://hrt.isomeria.top>
+
 ## 功能
 
 - **化验记录**：雌二醇（E2）、睾酮（T）、促黄体生成素（LH）、促卵泡生成激素（FSH）、催乳素（PRL）、孕酮（P4）六项指标，每项支持多种单位（pg/mL、pmol/L、ng/mL、ng/dL、nmol/L、IU/L、mIU/mL、µg/L），录入时自动换算为统一单位。
@@ -52,6 +54,8 @@ export GRADLE_USER_HOME="$PWD/.toolchain/gradle-home"
 - 建议定期在「设置 → 数据管理」中**导出 JSON 备份**并保存到网盘或电脑，换机时用「导入备份」恢复。
 
 ## 网页版（PWA，iPhone / iPad / 桌面可用）
+
+**在线地址：<https://hrt.isomeria.top>**（Cloudflare Pages 部署，随本仓库 `main` 分支推送自动更新）
 
 `web/` 目录为零依赖的静态 PWA，功能与安卓版一致（记录、图表、参考范围、时间线、个人资料、报告、AI 解读、导入导出、简繁中文、暗色模式），且**数据格式与安卓版互通**：安卓导出的 JSON 备份可直接在网页版「设置 → 导入备份」中恢复，反之亦然。所有数据仅存浏览器本机（localStorage），无服务器。
 
