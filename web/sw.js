@@ -1,5 +1,5 @@
 /* 激素监测（Web）—— Service Worker：应用外壳缓存，离线可用 */
-const CACHE = 'hrt-monitor-v1';
+const CACHE = 'hrt-monitor-v2';
 const ASSETS = [
   './',
   './index.html',

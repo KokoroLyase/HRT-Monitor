@@ -211,6 +211,28 @@
     const canvas = $('#chart-canvas');
     if (!canvas) return;
 
+    // 指标 / 时间范围 / 显示单位选择
+    $all('#chip-hormones .chip-btn').forEach(function (el) {
+      el.addEventListener('click', function () {
+        c.h = el.getAttribute('data-h');
+        c.selected = null;
+        c.unit = HRT.baseUnit(c.h);
+        HRT.render();
+      });
+    });
+    $all('#chip-ranges .chip-btn').forEach(function (el) {
+      el.addEventListener('click', function () {
+        c.rangeDays = parseFloat(el.getAttribute('data-days'));
+        c.selected = null;
+        HRT.render();
+      });
+    });
+    const unitSel = $('#chart-unit');
+    if (unitSel) unitSel.addEventListener('change', function () {
+      c.unit = unitSel.value;
+      HRT.render();
+    });
+
     let hitTest = null;
     const extra = HRT.renderChartExtras(data);
     const dark = (doc.documentElement.getAttribute('data-theme') || '') === 'dark';

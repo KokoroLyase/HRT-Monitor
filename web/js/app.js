@@ -198,6 +198,40 @@
       else if (state.route === 'timeline') HRT.openEventEditor(null);
     });
 
+    // 底部导航
+    $all('#bottomnav .nav-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const target = btn.getAttribute('data-route');
+        if (target) location.hash = target;
+      });
+    });
+
+    // 复制按钮（委托）
+    doc.addEventListener('click', function (e) {
+      const btn = e.target.closest ? e.target.closest('[data-copy]') : null;
+      if (!btn) return;
+      const pre = btn.parentElement ? btn.parentElement.querySelector('pre') : null;
+      if (!pre) return;
+      const text = pre.textContent || '';
+      const done = function () { HRT.toast(HRT.t('copied')); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text, done); });
+      } else {
+        fallbackCopy(text, done);
+      }
+    });
+
+    function fallbackCopy(text, done) {
+      const ta = doc.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      doc.body.appendChild(ta);
+      ta.select();
+      try { doc.execCommand('copy'); done(); } catch (err) { /* 忽略 */ }
+      ta.remove();
+    }
+
     HRT.render();
     firstRun();
 
