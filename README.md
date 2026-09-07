@@ -1,0 +1,56 @@
+# 激素监测（HRT Monitor）
+
+一款**本地优先、无账户、无广告**的安卓应用，用于跨性别女性性激素六项化验结果的记录、监测与报告。
+
+## 功能
+
+- **化验记录**：雌二醇（E2）、睾酮（T）、促黄体生成素（LH）、促卵泡生成激素（FSH）、催乳素（PRL）、孕酮（P4）六项指标，每项支持多种单位（pg/mL、pmol/L、ng/mL、ng/dL、nmol/L、IU/L、mIU/mL、µg/L），录入时自动换算为统一单位。
+- **趋势图表**：自绘折线图，任意指标按时间展示趋势，支持 全部/近1年/近6月/近3月 时间范围与显示单位切换；参考范围以色带叠加显示，点击数据点查看详情。
+- **参考范围管理**：内置常见参考范围（含 GAHT 目标范围）作为起点，支持自定义范围、图表显示开关、设置「目标范围」；首页与报告据此判断 偏低/范围内/偏高。
+- **生活事件时间线**：开始 HRT、用药调整、更换医生、手术等关键节点。
+- **个人资料**：可选填生日与 HRT 起始日期（首启引导、可跳过、设置中可改），每条记录自动显示「血检时年龄 · HRT 已进行时长」。
+- **报告**：本地统计报告（一键生成、复制、分享给医生）+ AI 智能解读（OpenAI 兼容接口，地址/密钥/模型均由用户自行填写，默认预置 DeepSeek）。
+- **数据导入/导出**：JSON 全量备份（合并/替换两种导入方式）与 CSV 记录导出，便于换机与分享。
+- **隐私**：所有数据仅存本机应用私有目录，无账户体系，不上传任何服务器（仅在用户主动触发 AI 解读时向用户指定的接口发送数据摘要）。
+- **其他**：暗色模式（跟随系统/手动），简体中文/繁體中文/跟随系统。
+- **免责声明**：首次启动强制确认，报告页与设置页显著展示——所有数据与解读仅供参考，不能替代专业医疗建议。
+
+## 安装 APK
+
+构建产物：`app/build/outputs/apk/release/app-release.apk`（R8 压缩混淆后的 release 签名包）。
+
+将其复制到手机后点击安装即可（需允许「安装未知来源应用」）。签名密钥见 `keystore/hrt-monitor.jks`，密码均为 `hrt-monitor`（个人使用；如需发布应用商店请自行更换密钥并妥善保管）。
+
+## 构建
+
+本机自带工具链位于 `.toolchain/`（Temurin JDK 17、Android SDK 35、Gradle 8.11.1），无需系统级安装：
+
+```bash
+export JAVA_HOME="$PWD/.toolchain/jdk-17.0.20.1+1"
+export ANDROID_HOME="$PWD/.toolchain/sdk"
+export GRADLE_USER_HOME="$PWD/.toolchain/gradle-home"
+
+./.toolchain/gradle-8.11.1/bin/gradle assembleRelease   # 构建 APK
+./.toolchain/gradle-8.11.1/bin/gradle test              # 运行单元测试（单位换算）
+```
+
+技术栈：Kotlin 2.0 + Jetpack Compose（Material 3）+ 自绘 Canvas 图表；数据以 JSON 文件存于应用私有目录，无 Room/网络依赖（AI 模块除外）。
+
+> 从仓库克隆后构建前需先生成签名密钥（本仓库不含密钥文件）：
+>
+> ```bash
+> mkdir -p keystore
+> keytool -genkeypair -v -keystore keystore/hrt-monitor.jks -alias hrt-monitor \
+>   -keyalg RSA -keysize 2048 -validity 10000 \
+>   -storepass hrt-monitor -keypass hrt-monitor \
+>   -dname "CN=HRT Monitor, OU=Personal, O=Personal, L=Local, C=CN"
+> ```
+
+## 数据位置与备份
+
+- 数据文件：`Android/data/com.hrt.monitor/files/hrt_data.json`（应用私有目录，卸载即删除）
+- 建议定期在「设置 → 数据管理」中**导出 JSON 备份**并保存到网盘或电脑，换机时用「导入备份」恢复。
+
+## 免责声明
+
+本应用仅用于自我记录与参考：图表、参考范围与解读不构成诊断依据；任何用药调整或医疗决策，请务必咨询医生。

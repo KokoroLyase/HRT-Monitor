@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">激素監測</string>
+    <string name="home_title">性荷爾蒙六項監測</string>
+
+    <!-- 通用 -->
+    <string name="ok">確定</string>
+    <string name="cancel">取消</string>
+    <string name="save">儲存</string>
+    <string name="delete">刪除</string>
+    <string name="edit">編輯</string>
+    <string name="add">新增</string>
+    <string name="back">返回</string>
+    <string name="share">分享</string>
+    <string name="copy">複製</string>
+    <string name="copied">已複製到剪貼簿</string>
+    <string name="low">偏低</string>
+    <string name="in_range">範圍內</string>
+    <string name="high">偏高</string>
+    <string name="unknown">未知</string>
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+    <string name="days_ago">%1$d 天前</string>
+    <string name="count_items">共 %1$d 筆</string>
+
+    <!-- 免責聲明 -->
+    <string name="disclaimer_short">所有資料與解讀僅供參考，不能替代專業醫療建議。</string>
+    <string name="disclaimer_full">本應用程式僅供自我記錄與參考：\n\n• 所有資料預設僅儲存在你的裝置本機，不註冊帳號、不上傳伺服器；\n• 圖表、參考範圍與解讀僅供參考，不構成診斷依據；\n• 參考範圍不適用於所有人，個體差異與用藥方案需由醫師評估；\n• 任何用藥調整或醫療決定，請務必諮詢醫師。</string>
+    <string name="disclaimer_banner">重要：所有資料、圖表與解讀僅供參考，不能替代專業醫療建議。任何醫療決定請諮詢醫師。</string>
+
+    <!-- 首次啟動 -->
+    <string name="first_launch_title">使用須知</string>
+    <string name="first_launch_agree">我已了解並同意</string>
+
+    <!-- 導覽 -->
+    <string name="nav_home">首頁</string>
+    <string name="nav_charts">圖表</string>
+    <string name="nav_timeline">時間軸</string>
+    <string name="nav_report">報告</string>
+    <string name="nav_settings">設定</string>
+
+    <!-- 首頁 -->
+    <string name="home_subtitle">資料僅存本機 · 隱私優先</string>
+    <string name="add_record">新增記錄</string>
+    <string name="all_records">全部記錄</string>
+    <string name="recent_records">最近記錄</string>
+    <string name="no_records_yet">還沒有檢驗記錄</string>
+    <string name="no_records_hint">點擊右下角按鈕，新增第一筆記錄</string>
+    <string name="latest_value">最近</string>
+    <string name="target">目標</string>
+    <string name="not_tested">未測</string>
+
+    <!-- 記錄編輯 -->
+    <string name="record_new">新增檢驗記錄</string>
+    <string name="record_edit">編輯檢驗記錄</string>
+    <string name="record_date">抽血日期</string>
+    <string name="record_note">備註（選填）</string>
+    <string name="record_note_hint">例如：抽血前距上次用藥的時間、當日用藥情況等</string>
+    <string name="record_empty_hint">留空表示本次未檢測該項</string>
+    <string name="record_unit">數值</string>
+    <string name="record_equals">≈ %1$s %2$s</string>
+    <string name="record_saved">已儲存</string>
+    <string name="record_deleted">已刪除</string>
+    <string name="record_need_one">請至少填寫一項檢測數值</string>
+    <string name="delete_record_confirm">刪除這筆記錄？</string>
+    <string name="delete_record_hint">刪除後無法復原。</string>
+    <string name="invalid_value">請輸入有效數字</string>
+
+    <!-- 歷史 -->
+    <string name="history_title">檢驗記錄</string>
+    <string name="history_empty">暫無檢驗記錄</string>
+
+    <!-- 圖表 -->
+    <string name="chart_title">趨勢圖表</string>
+    <string name="chart_range_all">全部</string>
+    <string name="chart_range_1y">近1年</string>
+    <string name="chart_range_6m">近6月</string>
+    <string name="chart_range_3m">近3月</string>
+    <string name="chart_no_data">該指標暫無資料</string>
+    <string name="chart_no_ranges">尚未啟用參考範圍，可在「設定 → 參考範圍」中開啟</string>
+    <string name="chart_tap_hint">點擊資料點查看詳情</string>
+    <string name="chart_stats_title">統計</string>
+    <string name="stat_count">次數</string>
+    <string name="stat_latest">最近</string>
+    <string name="stat_min">最低</string>
+    <string name="stat_max">最高</string>
+    <string name="stat_avg">平均</string>
+    <string name="stat_in_target">目標內佔比</string>
+    <string name="chart_unit">顯示單位</string>
+    <string name="chart_value_at">%1$s：%2$s %3$s</string>
+    <string name="chart_legend">參考範圍</string>
+
+    <!-- 時間軸 -->
+    <string name="timeline_title">生活事件</string>
+    <string name="timeline_empty">還沒有事件</string>
+    <string name="timeline_empty_hint">記錄開始HRT、更換醫師、手術等關鍵節點，便於回顧</string>
+    <string name="event_new">新增事件</string>
+    <string name="event_edit">編輯事件</string>
+    <string name="event_date">日期</string>
+    <string name="event_note">備註（選填）</string>
+    <string name="event_note_hint">例如：劑量調整、醫師姓名等</string>
+    <string name="event_saved">已儲存</string>
+    <string name="event_deleted">已刪除</string>
+    <string name="delete_event_confirm">刪除這個事件？</string>
+    <string name="event_type_start_hrt">開始HRT</string>
+    <string name="event_type_med_change">用藥調整</string>
+    <string name="event_type_doctor_change">更換醫師</string>
+    <string name="event_type_surgery">手術</string>
+    <string name="event_type_other">其他</string>
+
+    <!-- 報告 -->
+    <string name="report_title">報告</string>
+    <string name="report_local">本機統計報告</string>
+    <string name="report_local_desc">基於本機資料自動產生的摘要，可複製或分享給醫師</string>
+    <string name="report_generate">產生報告</string>
+    <string name="report_no_data">暫無檢驗資料，請先新增記錄</string>
+    <string name="report_local_footer">本報告由「激素監測」應用程式根據你的本機記錄自動產生，僅供參考。</string>
+    <string name="report_ai">智慧解讀（AI）</string>
+    <string name="report_ai_desc">透過你在設定中配置的大模型介面產生解讀。產生時會將資料摘要傳送至你指定的服務，請留意其隱私政策。</string>
+    <string name="report_ai_btn">產生 AI 解讀</string>
+    <string name="report_ai_loading">正在產生，請稍候…</string>
+    <string name="report_ai_failed">產生失敗：%1$s</string>
+    <string name="report_ai_not_configured">尚未配置 AI 介面。請到「設定 → AI 智慧解讀」填寫介面地址、金鑰與模型。</string>
+    <string name="report_ai_go_settings">前往設定</string>
+    <string name="report_ai_note">AI 產生內容僅供參考，可能存在錯誤，不能替代專業醫療建議。</string>
+    <string name="report_header">性荷爾蒙監測報告</string>
+    <string name="report_generated_at">產生時間：%1$s</string>
+    <string name="report_record_count">檢驗記錄：%1$d 筆</string>
+    <string name="report_event_count">生活事件：%1$d 筆</string>
+    <string name="report_section_hormone">【%1$s】（單位：%2$s）</string>
+    <string name="report_line_stats">次數 %1$d · 最近 %2$s：%3$s %4$s（目標：%5$s）</string>
+    <string name="report_line_range">範圍 %1$s – %2$s · 平均 %3$s · 目標內 %4$s</string>
+    <string name="report_status_in">範圍內</string>
+    <string name="report_status_low">低於目標</string>
+    <string name="report_status_high">高於目標</string>
+    <string name="report_status_no_target">未設目標</string>
+    <string name="report_no_value">無</string>
+    <string name="report_recent_events">近期事件</string>
+
+    <!-- 設定 -->
+    <string name="settings_title">設定</string>
+    <string name="set_ranges">參考範圍</string>
+    <string name="set_ranges_desc">查看與自訂每個指標的參考範圍</string>
+    <string name="set_ai">AI 智慧解讀</string>
+    <string name="set_ai_desc">配置大模型 API，金鑰僅儲存在本機</string>
+    <string name="set_appearance">外觀</string>
+    <string name="set_theme">主題</string>
+    <string name="theme_system">跟隨系統</string>
+    <string name="theme_light">淺色</string>
+    <string name="theme_dark">深色</string>
+    <string name="set_language">語言</string>
+    <string name="lang_system">跟隨系統</string>
+    <string name="lang_zh_cn">简体中文</string>
+    <string name="lang_zh_tw">繁體中文</string>
+    <string name="set_data">資料管理</string>
+    <string name="data_export_json">匯出備份（JSON）</string>
+    <string name="data_export_csv">匯出記錄（CSV）</string>
+    <string name="data_import">匯入備份</string>
+    <string name="data_clear">清空所有資料</string>
+    <string name="data_export_done">已匯出：%1$s</string>
+    <string name="data_export_failed">匯出失敗：%1$s</string>
+    <string name="data_import_done">匯入完成：記錄 %1$d 筆、事件 %2$d 筆、自訂範圍 %3$d 個</string>
+    <string name="data_import_failed">匯入失敗：%1$s</string>
+    <string name="import_invalid">檔案格式無效</string>
+    <string name="data_import_title">如何匯入？</string>
+    <string name="data_import_desc">選擇匯入方式</string>
+    <string name="import_merge">合併（保留現有資料，相同條目以匯入為準）</string>
+    <string name="import_replace">替換（清空現有資料後匯入）</string>
+    <string name="clear_confirm">清空所有資料？</string>
+    <string name="clear_confirm_desc">所有檢驗記錄、生活事件與自訂參考範圍將被刪除，且無法復原。</string>
+    <string name="data_cleared">已清空</string>
+    <string name="set_about">關於</string>
+    <string name="about_version">版本 %1$s</string>
+    <string name="about_privacy_title">隱私說明</string>
+    <string name="about_privacy_desc">本應用程式無帳號體系，所有資料預設僅儲存在你的裝置本機，不經過任何雲端伺服器。匯出、分享與 AI 解讀均由你主動發起：AI 解讀會把你記錄的資料摘要傳送至你在設定中指定的介面服務。</string>
+    <string name="about_disclaimer_title">免責聲明</string>
+    <string name="about_build">本地優先 · 無廣告無追蹤</string>
+
+    <!-- AI 設定 -->
+    <string name="ai_base_url">介面地址</string>
+    <string name="ai_base_url_hint">OpenAI 相容地址，如 https://api.deepseek.com/v1</string>
+    <string name="ai_api_key">API 金鑰</string>
+    <string name="ai_api_key_hint">僅儲存在本機，不會上傳</string>
+    <string name="ai_model">模型名稱</string>
+    <string name="ai_test">測試連線</string>
+    <string name="ai_test_ok">連線成功 ✓</string>
+    <string name="ai_test_failed">連線失敗：%1$s</string>
+    <string name="ai_save">儲存配置</string>
+    <string name="ai_saved">已儲存</string>
+    <string name="ai_config_loading">正在測試連線…</string>
+    <string name="ai_system_prompt">你是一位熟悉跨性別女性荷爾蒙替代治療（GAHT）的健康資訊助手。請基於用戶提供的性荷爾蒙檢驗資料，給出客觀、謹慎、資訊性的解讀：解釋各項指標的含義、變化趨勢、與目標/參考範圍的關係、值得關注的異常，並列出與醫師溝通時可提出的問題。請使用簡潔清晰的結構（小標題+要點）。必須強調：內容僅供參考，不構成醫療建議，任何用藥調整需諮詢醫師。使用繁體中文回答。</string>
+
+    <!-- 參考範圍 -->
+    <string name="ranges_title">參考範圍管理</string>
+    <string name="ranges_desc">內建範圍來自常見公開資料，僅作為起點參考，並非診斷依據；建議根據醫師的建議設定你的目標範圍。</string>
+    <string name="range_add">新增自訂範圍</string>
+    <string name="range_edit">編輯範圍</string>
+    <string name="range_name">名稱</string>
+    <string name="range_min">下限</string>
+    <string name="range_max">上限</string>
+    <string name="range_unit">單位</string>
+    <string name="range_target">設為「目標範圍」</string>
+    <string name="range_target_hint">首頁狀態與報告將對照目標範圍判斷</string>
+    <string name="range_show_chart">在圖表中顯示</string>
+    <string name="range_builtin">內建</string>
+    <string name="range_custom">自訂</string>
+    <string name="range_saved">已儲存</string>
+    <string name="range_deleted">已刪除</string>
+    <string name="range_delete_confirm">刪除這個範圍？</string>
+    <string name="range_invalid">下限需小於上限</string>
+    <string name="range_invalid_number">請輸入有效數字</string>
+    <string name="range_no_ranges">該指標暫無參考範圍</string>
+    <string name="range_value_span">%1$s – %2$s %3$s</string>
+    <string name="range_threshold">≥ %1$s %2$s</string>
+
+    <!-- 荷爾蒙名稱 -->
+    <string name="hormone_e2">雌二醇（E2）</string>
+    <string name="hormone_t">睪固酮（T）</string>
+    <string name="hormone_lh">黃體生成素（LH）</string>
+    <string name="hormone_fsh">濾泡刺激素（FSH）</string>
+    <string name="hormone_prl">泌乳素（PRL）</string>
+    <string name="hormone_p4">黃體素（P4）</string>
+
+    <!-- 內建參考範圍 -->
+    <string name="range_e2_male">成年男性參考範圍</string>
+    <string name="range_e2_foll">女性濾泡期</string>
+    <string name="range_e2_lut">女性黃體期</string>
+    <string name="range_e2_gaht">非注射型女性向 GAHT 目標</string>
+    <string name="range_t_male">成年男性參考範圍</string>
+    <string name="range_t_female">女性參考範圍</string>
+    <string name="range_t_gaht">女性向 GAHT 目標</string>
+    <string name="range_prl_female">女性參考範圍</string>
+    <string name="range_prl_high">顯著升高提示（≥ 69.9 ng/mL）</string>
+    <string name="range_lh_foll">濾泡期</string>
+    <string name="range_lh_ovu">排卵期</string>
+    <string name="range_lh_lut">黃體期</string>
+    <string name="range_lh_gaht">女性向 GAHT 常見（受抑制）</string>
+    <string name="range_fsh_foll">濾泡期</string>
+    <string name="range_fsh_ovu">排卵期</string>
+    <string name="range_fsh_lut">黃體期</string>
+    <string name="range_fsh_gaht">女性向 GAHT 常見（受抑制）</string>
+    <string name="range_p4_foll">濾泡期</string>
+    <string name="range_p4_lut">黃體期</string>
+    <string name="range_p4_gaht">女性向 GAHT 常見（&lt; 1 ng/mL）</string>
+
+    <!-- 個人資料 -->
+    <string name="profile_title">個人資料</string>
+    <string name="profile_birthday">生日</string>
+    <string name="profile_hrt_start">HRT 起始日期</string>
+    <string name="profile_hint">選填。用於在記錄中顯示抽血時的年齡與 HRT 進行時間，可隨時在設定中修改。</string>
+    <string name="profile_skip">跳過</string>
+    <string name="profile_saved">已儲存</string>
+    <string name="profile_not_set">未設定</string>
+    <string name="set_profile">個人資料</string>
+    <string name="set_profile_desc">生日與 HRT 起始日期（選填）</string>
+    <string name="age_at">年齡 %1$d 歲</string>
+    <string name="hrt_for">HRT 已進行 %1$s</string>
+    <string name="dur_years">%1$d年</string>
+    <string name="dur_months">%1$d個月</string>
+    <string name="dur_days">%1$d天</string>
+
+    <!-- 開發者資訊 -->
+    <string name="about_developer">開發者：Isomeria和DeepSeek-V4-Pro MAX</string>
+    <string name="about_contact">聯絡信箱：sudoujun@163.com</string>
+</resources>

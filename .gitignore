@@ -1,0 +1,11 @@
+# 构建产物与本机工具链（体积大，不建议提交）
+.toolchain/
+keystore/
+app/build/
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+.kotlin/
+*.apk
